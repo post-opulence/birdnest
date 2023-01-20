@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, {  useState, useRef } from 'react';
 import { useQuery } from 'react-query'
 
 function Grid() {
@@ -18,7 +18,7 @@ function Grid() {
 
   return (
     <div className='grid'>
-      <img ref={imageRef} src='/grid.png' alt='grid' className='image' />
+      <img ref={imageRef} src='/Grid.png' alt='grid' className='image' />
       <div>
         {gridData.map((drone, index) => {
           let posX = (drone.positionX * (imageRef.current.clientWidth / 500000));
