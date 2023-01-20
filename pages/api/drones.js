@@ -65,7 +65,6 @@ export default async function drones(req, res) {
         // Use fast-xml-parser to parse the XML data into JSON
         const parser = new XMLParser();
         const parsedData = parser.parse(xmlData.data)
-        console.log(parsedData)
         return parsedData.report.capture.drone
     }
 
@@ -83,6 +82,7 @@ export default async function drones(req, res) {
      cron.schedule('*/2 * * * * *', async () => {
     try {
         const drones = await fetchDrones();
+        console.log(drones)
         const violatingDrones = drones.filter(drone => {
             const distance = (Math.sqrt(Math.pow(drone.positionX - 250000, 2) + Math.pow(drone.positionY - 250000, 2)))/1000;
             if (distance <= 100) {}
