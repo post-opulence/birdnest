@@ -5,8 +5,8 @@ import Grid from './Components/Grid'
 
 
 const supabase = createClient(
-  'process.env.API_URL',
-  'process.env.API_KEY'
+  process.env.API_URL,
+  process.env.API_KEY
 )
 
 
