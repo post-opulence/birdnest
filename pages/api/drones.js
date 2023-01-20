@@ -65,6 +65,7 @@ export default async function drones(req, res) {
         // Use fast-xml-parser to parse the XML data into JSON
         const parser = new XMLParser();
         const parsedData = parser.parse(xmlData.data)
+        console.log(parsedData)
         return parsedData.report.capture.drone
     }
 
@@ -75,6 +76,7 @@ export default async function drones(req, res) {
                  'Content-Type': 'application/json'
              }
          })
+         console.log(pilot)
          return pilot
      }
 
