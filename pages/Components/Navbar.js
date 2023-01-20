@@ -19,7 +19,7 @@ const Navbar = () => {
           </Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link legacyBehavior href="/About">
+          <Link legacyBehavior href="/about">
             <a>About Us</a>
           </Link>
         </Menu.Item>
