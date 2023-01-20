@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { XMLParser } from 'fast-xml-parser';
 import { Client } from 'pg';
+var cron = require('node-cron'); 
 
 const client = new Client({
     connectionString: process.env.CONNECTION_STRING,
