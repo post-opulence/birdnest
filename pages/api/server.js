@@ -5,7 +5,9 @@ const { Client } = require('pg');
 
 const app = express();
 
-app.get('/', (req, res) => {
+
+
+app.use('/drones', (req, res) => {
     res.send('Server running!');
 });
 
