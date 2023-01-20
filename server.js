@@ -1,13 +1,19 @@
+const express = require('express');
 const cron = require('node-cron');
 const axios = require('axios');
 const { Client } = require('pg');
 
-const client = new Client({
-    connectionString: process.env.CONNECTION_STRING,
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Server running!');
 });
 
-client.connect();
+const client = new Client({
+    connectionString: process.env.connectionString,
+});client.connect();
 
+// Store data in Supabase DB
 async function storeData(drone, pilot) {
     try {
       const existingDrone = await client.query(`SELECT * FROM drones WHERE serial_number = $1`, [drone.serialNumber]);
@@ -57,19 +63,24 @@ const fetchDrones = async () => {
 }
 
 // Fetch pilot data
-const fetchPilots = async (SN) => {
+const fetchPilot = async (SN) => {
     const {data} = await axios.get(`/api/pilot?SN=${SN}`);
     return data
 }
 
-// schedule a task to fetch drone data every 2 seconds
+ // Schedule a task to fetch drone data every 2 seconds
 cron.schedule('*/2 * * * * *', async () => {
+    console.log('test 1')
     const drones = await fetchDrones();
     const violatingDrones = drones.violatingDrones;
     // iterate over violatingDrones and fetch pilot data
     for (let drone of violatingDrones) {
         const SN = drone.serialNumber
-        const pilot = await fetchPilots(SN);
+        const pilot = await fetchPilot(SN);
         storeData(drone, pilot);
     }
+});
+
+app.listen(3000, () => {
+    console.log('Server started on http://localhost:3000');
 });
