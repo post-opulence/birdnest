@@ -19,6 +19,7 @@ export default async function drones(req, res) {
           const serial_number = drone.serialNumber;
           const position_x = parseFloat(drone.positionX);
           const position_y = parseFloat(drone.positionY);
+          console.log(pilot.createdDt)
           const first_seen = new Date(pilot.createdDt).toISOString();
           const pilot_id = pilot.pilotId
           const first_name = pilot.firstName
