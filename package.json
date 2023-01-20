@@ -1,18 +1,26 @@
 {
   "name": "birdnest",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node cron.js && next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.4.0",
+    "antd": "^5.1.4",
+    "axios": "^1.2.2",
     "eslint": "8.31.0",
-    "eslint-config-next": "13.1.1",
+    "eslint-config-next": "^0.2.4",
+    "fast-xml-parser": "^4.0.13",
+    "moment": "^2.29.4",
     "next": "13.1.1",
+    "node-cron": "^3.0.2",
+    "pg": "^8.8.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-query": "^3.39.2"
   }
 }
