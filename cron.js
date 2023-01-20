@@ -3,7 +3,7 @@ const axios = require('axios');
 const { Client } = require('pg');
 
 const client = new Client({
-    connectionString: 'postgres://postgres:roXXPZ58JXdtQBcm@db.twkoirzzcguijygadfxx.supabase.co:6543/postgres',
+    connectionString: process.env.CONNECTION_STRING,
 });
 
 client.connect();
