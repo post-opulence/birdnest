@@ -140,8 +140,8 @@
 
 
 
-/* Media query for screens smaller than 800px */
-@media (max-width: 800px) {
+/* Media query for screens smaller than 1200px */
+@media (max-width: 1200px) {
   .container {
     flex-direction: column;
     /* stack the divs vertically */
