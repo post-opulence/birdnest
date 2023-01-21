@@ -1,9 +1,11 @@
+import { Analytics } from '@vercel/analytics/react';
 import '../styles/globals.css'
 import '../styles/home.css'
 import React from 'react'
 import Head from 'next/head'
 import Navbar from './Components/Navbar'
 import { QueryClient, QueryClientProvider } from 'react-query';
+
 const queryClient = new QueryClient();
 
 
@@ -17,6 +19,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Navbar />
       <Component {...pageProps} />
+      <Analytics />
     </>
     </QueryClientProvider>
   )
