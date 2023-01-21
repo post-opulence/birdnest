@@ -6,7 +6,7 @@ const { Client } = require('pg');
 
 const parser = new XMLParser();
 const client = new Client({
-    connectionString: 'postgres://postgres:roXXPZ58JXdtQBcm@db.twkoirzzcguijygadfxx.supabase.co:6543/postgres',
+    connectionString: process.env.connectionString,
 });
 client.connect();
 console.log('Connection established.')
