@@ -29,7 +29,7 @@ function Grid() {
               <img
                 key={index}
                 src='/red.svg'
-                alt='drone'
+                alt='red drone'
                 className={`drone drone-${drone.serial_number}`}
                 style={{ position: 'absolute', left: posX + 'px', top: posY + 'px', maxWidth: '5%', maxHeight: '5%' }}
               />
@@ -39,7 +39,7 @@ function Grid() {
               <img
                 key={index}
                 src='/white.svg'
-                alt='drone'
+                alt='white drone'
                 className={`drone drone-${drone.serial_number}`}
                 style={{ position: 'absolute', left: posX + 'px', top: posY + 'px', maxWidth: '5%', maxHeight: '5%' }}
               />
