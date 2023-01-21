@@ -6,7 +6,6 @@
 
 .container > div {
   padding: 10px;
-  /* add some padding for spacing */
 }
 
 .grid {
@@ -141,8 +140,8 @@
 
 
 
-/* Media query for screens smaller than 600px */
-@media (max-width: 1000px) {
+/* Media query for screens smaller than 800px */
+@media (max-width: 800px) {
   .container {
     flex-direction: column;
     /* stack the divs vertically */

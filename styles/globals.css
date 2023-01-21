@@ -16,7 +16,7 @@ body::before {
   background-image: url('/Birds.jpg');
   background-size: cover;
   filter: blur(5px);
-  z-index: -1; /* make sure it's behind other content */
+  z-index: -1;
 }
 
 
