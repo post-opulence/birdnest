@@ -73,7 +73,6 @@ const Index = () => {
             Drones violating the NDZ are colored in Red.
             </p>
           </div>
-
           <Grid drones={drones} />
         </div>
       </div>

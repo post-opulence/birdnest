@@ -7,27 +7,23 @@ const Navbar = () => {
 
   return (
     <div>
-    <Header>
-      <div className="name">
-        <img src="/name.svg" alt="Logo" />
-      </div>      
-    </Header>
-    <Menu className='header' mode="horizontal">
+      <Header>
+        <div className="name">
+          <Link href="/"><img src="/name.svg" alt="Logo" /></Link>
+        </div>
+      </Header>
+      <Menu className='header' mode="horizontal">
         <Menu.Item key="1">
-          <Link legacyBehavior href="/">
-            <a>Home</a>
-          </Link>
+          <Link href="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link legacyBehavior href="/about">
-            <a>About Us</a>
-          </Link>
+          <Link href="/about">About Us</Link>
         </Menu.Item>
         <Menu.Item key="3">
-            <a href="https://animalcharityevaluators.org/donation-advice/recommended-charities/" target="_blank">Donate</a>
+          <a href="https://animalcharityevaluators.org/donation-advice/recommended-charities/" target="_blank">Donate</a>
         </Menu.Item>
       </Menu>
-      </div>
+    </div>
   );
 };
 

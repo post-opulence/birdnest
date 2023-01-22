@@ -1,5 +1,5 @@
 import { Table, ConfigProvider } from 'antd';
-import moment from 'moment';
+import { format } from 'date-fns'
 import { useState } from 'react';
 
 const columns = [
@@ -37,7 +37,7 @@ const columns = [
         title: 'Last Seen',
         dataIndex: 'last_seen',
         key: 'last_seen',
-        render: (text) => moment(text).format("HH:mm:ss"),
+        render: (text) => format(new Date(text), "HH:mm:ss"),
         sorter: (a, b) => new Date(a.last_seen) - new Date(b.last_seen)
     }
 ];
@@ -63,7 +63,7 @@ const expandedRowRender = (record) => {
             title: 'First Seen',
             dataIndex: 'first_seen',
             key: 'first_seen',
-            render: (text) => moment(text).format("MM-DD-YYYY HH:mm:ss")
+            render: (text) => format(new Date(text),"MM-DD-YYYY HH:mm:ss")
         },
     ];
 
