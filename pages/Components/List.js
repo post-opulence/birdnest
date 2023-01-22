@@ -63,7 +63,7 @@ const expandedRowRender = (record) => {
             title: 'First Seen',
             dataIndex: 'first_seen',
             key: 'first_seen',
-            render: (text) => format(new Date(text),"MM-DD-YYYY HH:mm:ss")
+            render: (text) => format(new Date(text),"MM-dd-yyyy HH:mm:ss")
         },
     ];
 
