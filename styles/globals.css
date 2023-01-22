@@ -13,7 +13,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/Birds.jpg');
+  background-image: url('/birds.jpg');
   background-size: cover;
   filter: blur(5px);
   z-index: -1;
