@@ -36,7 +36,7 @@ function Grid() {
 
   return (
     <div className='grid'>
-      <img ref={imageRef} src='/grid.png' alt='grid' className='image' />
+      <img ref={imageRef} src='/Grid.png' alt='grid' className='image' />
       <div>
         {gridPositions(gridData)}
       </div>
