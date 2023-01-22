@@ -2,7 +2,7 @@
 
 This is my solution to Reaktor's 2022 Summer Trainee assignment. The complete assignment brief can be found [here](https://web.archive.org/web/20221220105911/https://assignments.reaktor.com/birdnest/).
 This repository is the front-end of the project. The backend repository is available [here](https://github.com/post-opulence/birdnest-backend). 
-This frontend is hosed on Vercel and is available at : https://monadikuikka-gamma.vercel.app/.
+The frontend is hosted on Vercel and is available at : https://monadikuikka-gamma.vercel.app/
 
 ## Description
 
