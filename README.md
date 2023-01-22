@@ -16,7 +16,7 @@ Data for the map is fetched every 2 seconds using react-query as the database on
     react-query
     axios
     antd
-    moment
+    date-fns
 
 ## Run locally 
 
