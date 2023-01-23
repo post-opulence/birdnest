@@ -6,9 +6,9 @@ function Grid() {
   const imageRef = useRef(null);
 
   const { data, status } = useQuery('drones', async () => {
-    const response = await fetch('/api/drones');
-    const data = response.json();
-    return data
+    const data = await fetch('/api/drones');
+    return data.json()
+
   }, {
     refetchInterval: 2000,
     onSuccess: (data) => {
