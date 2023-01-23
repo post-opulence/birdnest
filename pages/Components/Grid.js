@@ -7,7 +7,7 @@ function Grid() {
 
   const { data, status } = useQuery('drones', async () => {
     const response = await fetch('/api/drones');
-    const data = await response.json();
+    const data = response.json();
     return data
   }, {
     refetchInterval: 2000,
