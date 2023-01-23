@@ -14,6 +14,19 @@ export default async function drones(req, res) {
         res.status(200).send(parsedData.report.capture.drone)
     }
     catch (error) {
-        return res.status(404).send('Drone data not found.')
+        if(error.response) {
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+            res.status(error.response.status).send(error.response.data);
+        } else if (error.request) {
+            console.log(error.request);
+            res.status(500).send(error.request);
+        } else {
+            console.log('Error', error.message);
+            res.status(500).send(error.message);
+        }
+        console.log(error.config);
     }
+    
 }
